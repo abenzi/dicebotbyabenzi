@@ -1,6 +1,7 @@
 from aiogram import types, executor, Dispatcher, Bot
 from fake_useragent import UserAgent
 import requests
+import time
 
 ua = UserAgent()
 TOKEN = '5022622705:AAF-nLtYZr3mTCbo8OOrHhOqqzTek8B0630'
@@ -27,6 +28,8 @@ async def parser(message: types.Message):
             if redNumber == blueNumber:
                 await message.answer('Игра: Дуэль Костей 🎲\n\n' 'Тираж: 'f'{code}\n\n' 'Результат: 'f'{redNumber}' ' : ' f'{blueNumber}')
                 back_code = code
+
+        time.sleep(10)
 
 if __name__ == '__main__':
     executor.start_polling(dp)
