@@ -8,7 +8,7 @@ Group=abenzi
 
 WorkingDirectory=/home/abenzi/dicebotbyabenzi/
 Environment="PYTHONPATH=/home/abenzi/dicebotbyabenzi/"
-ExecStart=/home/abenzi/dicebotbyabenzi/.venv/bin/python /home/abenzi/dicebotbyabenzi/ubuntu18/bot.py
+ExecStart=/home/abenzi/dicebotbyabenzi/.venv/bin/python /home/abenzi/dicebotbyabenzi/bot.py
 
 [Install]
 WantedBy=multi-user.target
