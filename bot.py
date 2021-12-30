@@ -1,5 +1,3 @@
-import json
-
 from aiogram import types, executor, Dispatcher, Bot
 from fake_useragent import UserAgent
 import requests
@@ -12,6 +10,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def parser(message: types.Message):
+    await message.answer('Бот начал работу!')
     back_code_0 = None
     back_code_1 = None
     back_code_2 = None
@@ -55,58 +54,65 @@ async def parser(message: types.Message):
         blueNumber_3 = results_3[1].get('number')
         blueNumber_4 = results_4[1].get('number')
 
-
         if code_0 != back_code_0 and code_1 != back_code_1 and code_2 != back_code_2 and code_3 != back_code_3 and code_4 != back_code_4:
-            if redNumber_0 > blueNumber_0:
-                time.sleep(2)
+            if redNumber_0 < blueNumber_0:
+                time.sleep(1)
                 back_code_0 = code_0
                 if code_1 != back_code_1:
-                    if redNumber_1 > blueNumber_1:
-                        time.sleep(2)
+                    if redNumber_1 < blueNumber_1:
+                        time.sleep(1)
                         back_code_1 = code_1
                         if code_2 != back_code_2:
-                            if redNumber_2 > blueNumber_2:
-                                time.sleep(2)
+                            if redNumber_2 < blueNumber_2:
+                                time.sleep(1)
                                 back_code_2 = code_2
                                 if code_3 != back_code_3:
-                                    if redNumber_3 > blueNumber_3:
-                                        time.sleep(2)
+                                    if redNumber_3 < blueNumber_3:
+                                        await message.answer('⚠ Приготовься...')
+                                        time.sleep(1)
                                         back_code_3 = code_3
                                         if code_4 != back_code_4:
-                                            if redNumber_4 > blueNumber_4:
-                                                time.sleep(2)
+                                            if redNumber_4 < blueNumber_4:
+                                                time.sleep(1)
                                                 back_code_4 = code_4
                                                 await message.answer('➖➖➖➖➖➖➖➖➖➖➖\n'
                                                                      '✅ Прогноз: 🔵\n'
                                                                      f'🔻 Результат | Тираж 🔻\n'
                                                                      f'1️⃣  {redNumber_0} : {blueNumber_0}   |   {code_0}\n'
                                                                      f'2️⃣  {redNumber_1} : {blueNumber_1}   |   {code_1}\n'
+                                                                     f'3️⃣  {redNumber_2} : {blueNumber_2}   |   {code_2}\n'
+                                                                     f'4️⃣  {redNumber_3} : {blueNumber_3}   |   {code_3}\n'
+                                                                     f'5️⃣  {redNumber_4} : {blueNumber_4}   |   {code_4}\n'
                                                                      '➖➖➖➖➖➖➖➖➖➖➖'
                                                                     )
             if redNumber_0 > blueNumber_0:
-                time.sleep(2)
+                time.sleep(1)
                 back_code_0 = code_0
                 if code_1 != back_code_1:
                     if redNumber_1 > blueNumber_1:
-                        time.sleep(2)
+                        time.sleep(1)
                         back_code_1 = code_1
                         if code_2 != back_code_2:
                             if redNumber_2 > blueNumber_2:
-                                time.sleep(2)
+                                time.sleep(1)
                                 back_code_2 = code_2
                                 if code_3 != back_code_3:
                                     if redNumber_3 > blueNumber_3:
-                                        time.sleep(2)
+                                        await message.answer('⚠ Приготовься...')
+                                        time.sleep(1)
                                         back_code_3 = code_3
                                         if code_4 != back_code_4:
                                             if redNumber_4 > blueNumber_4:
-                                                time.sleep(2)
+                                                time.sleep(1)
                                                 back_code_4 = code_4
                                                 await message.answer('➖➖➖➖➖➖➖➖➖➖➖\n'
                                                                      '✅ Прогноз: 🔴\n'
                                                                      f'🔻 Результат | Тираж 🔻\n'
                                                                      f'1️⃣  {redNumber_0} : {blueNumber_0}   |   {code_0}\n'
                                                                      f'2️⃣  {redNumber_1} : {blueNumber_1}   |   {code_1}\n'
+                                                                     f'3️⃣  {redNumber_2} : {blueNumber_2}   |   {code_2}\n'
+                                                                     f'4️⃣  {redNumber_3} : {blueNumber_3}   |   {code_3}\n'
+                                                                     f'5️⃣  {redNumber_4} : {blueNumber_4}   |   {code_4}\n'
                                                                      '➖➖➖➖➖➖➖➖➖➖➖'
                                                                     )
 
