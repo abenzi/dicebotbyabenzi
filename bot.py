@@ -10,7 +10,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def parser(message: types.Message):
-    await message.answer('Бот начал работу!')
+    await message.answer('Добро пожоловать!\nБот начал работу!')
     back_code_0 = None
     back_code_1 = None
     back_code_2 = None
@@ -68,7 +68,7 @@ async def parser(message: types.Message):
                                 back_code_2 = code_2
                                 if code_3 != back_code_3:
                                     if redNumber_3 < blueNumber_3:
-                                        await message.answer('⚠ Приготовься...')
+                                        await message.answer('⚠️Приготовься Красный...')
                                         time.sleep(1)
                                         back_code_3 = code_3
                                         if code_4 != back_code_4:
@@ -76,7 +76,7 @@ async def parser(message: types.Message):
                                                 time.sleep(1)
                                                 back_code_4 = code_4
                                                 await message.answer('➖➖➖➖➖➖➖➖➖➖➖\n'
-                                                                     '✅ Прогноз: 🔵\n'
+                                                                     '✅ Прогноз: 🔴\n'
                                                                      f'🔻 Результат | Тираж 🔻\n'
                                                                      f'1️⃣  {redNumber_0} : {blueNumber_0}   |   {code_0}\n'
                                                                      f'2️⃣  {redNumber_1} : {blueNumber_1}   |   {code_1}\n'
@@ -98,7 +98,7 @@ async def parser(message: types.Message):
                                 back_code_2 = code_2
                                 if code_3 != back_code_3:
                                     if redNumber_3 > blueNumber_3:
-                                        await message.answer('⚠ Приготовься...')
+                                        await message.answer('⚠️Приготовься Синий...')
                                         time.sleep(1)
                                         back_code_3 = code_3
                                         if code_4 != back_code_4:
@@ -106,7 +106,7 @@ async def parser(message: types.Message):
                                                 time.sleep(1)
                                                 back_code_4 = code_4
                                                 await message.answer('➖➖➖➖➖➖➖➖➖➖➖\n'
-                                                                     '✅ Прогноз: 🔴\n'
+                                                                     '✅ Прогноз: 🔵\n'
                                                                      f'🔻 Результат | Тираж 🔻\n'
                                                                      f'1️⃣  {redNumber_0} : {blueNumber_0}   |   {code_0}\n'
                                                                      f'2️⃣  {redNumber_1} : {blueNumber_1}   |   {code_1}\n'
